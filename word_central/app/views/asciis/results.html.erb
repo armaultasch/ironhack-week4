@@ -1,0 +1,15 @@
+<!-- results.html.erb -->
+<html>
+<pre> <%= @word_art %> </pre>
+
+
+<form action="/" method="get">
+<!--   <div>
+    <label for="text_inspection_user_text">Text</label>
+    <textarea name="text_inspection[user_text]" id="text_inspection_user_text"></textarea>
+  </div> -->
+  <button type="submit">Go Back Home</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+</html>

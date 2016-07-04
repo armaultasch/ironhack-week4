@@ -6,4 +6,7 @@ class SiteController < ApplicationController
 	def contact
 		render 'contact'
 	end
+	def _sign_up
+		render 'sign_up'
+	end
 end

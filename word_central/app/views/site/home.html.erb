@@ -1,0 +1,23 @@
+<!-- home.html.erb -->
+<h1>Word Central</h1>
+
+<p>Your destination for text utilities.</p>
+<form action='/text_inspections/new' method="post">
+<!--   <div>
+    <label for="text_inspection_user_text">Text</label>
+    <textarea name="text_inspection[user_text]" id="text_inspection_user_text"></textarea>
+  </div> -->
+  <button type="submit">Enter Words</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+<form action='/asciis/new' method="post">
+<!--   <div>
+    <label for="text_inspection_user_text">Text</label>
+    <textarea name="text_inspection[user_text]" id="text_inspection_user_text"></textarea>
+  </div> -->
+  <button type="submit">Enter Word to Ascii</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+</html>
