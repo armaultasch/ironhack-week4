@@ -1,0 +1,14 @@
+<!-- index.html.erb -->
+
+<h2> List of Projects </h2>
+
+<ul> 
+	<% @projects_array.each do |the_project| %>
+	<li>
+		<%= the_project.name %>
+		<% if the_project.description != nil %>
+		- <% the_project.description %>
+	<% end %>
+	</li>
+<% end %>
+</ul>
