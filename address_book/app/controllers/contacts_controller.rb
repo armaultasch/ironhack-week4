@@ -5,6 +5,7 @@ class ContactsController < ApplicationController
 	end
 
 	def new
+
 		render "new"
 	end
 
@@ -19,4 +20,9 @@ class ContactsController < ApplicationController
     # render(:text => contact.attributes)
     redirect_to '/contacts'
 	end	
+
+	def show
+	@contact = Contact.find(params[:id])
+		render "show"
+	end
 end

@@ -5,4 +5,7 @@ get '/contacts/new', to: 'contacts#new'
 post '/contacts', to: 'contacts#create'
 get '/contacts', to: 'contacts#index'
 post '/contacts/new', to: 'contacts#new'
+get '/contacts/:id/show', to: 'contacts#show'
+
 end
+
