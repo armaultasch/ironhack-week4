@@ -1,0 +1,17 @@
+<!-- new.html.erb -->
+<html>
+<h1>Word Central</h1>
+
+<h2>This is the placeholder text area, bitch.</h2>
+
+<form action="/holder" method="post">
+ <input type="number" name="quantity">
+ <!-- <form> -->
+  <input type="radio" name="type" value="male" checked> Words<br><input type="radio" name="type" value="female"> Paragraph<br>
+  
+<!-- </form> -->
+  <button type="submit">Enter bullshit</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+</html>
