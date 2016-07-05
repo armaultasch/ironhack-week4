@@ -8,5 +8,12 @@
 puts "Creating three projects"
 projectA = Project.create(name: "Ironhack", description: "Coding bootcamp")
 projectB = Project.create(name: "Papa Johns", description: "Decent chain for pizza")
-projectC = Project.create(name: "Taco Bell")
+projectC = Project.create(name: "Taco Bell", description: "The best place on earth")
+projectD = Project.create(name: "Barney's", description: "A Shop")
+projectE = Project.create(name: "Chabad")
+projectF = Project.create(name: "Wendy's")
+projectG = Project.create(name: "Tobi", description: "Where I spend my money")
+projectH = Project.create(name: "Staples", description: "Get office supplies")
+projectI = Project.create(name: "Facebook")
+projectJ = Project.create(name: "Snapchat", description: "viewing stories")
 puts "done"

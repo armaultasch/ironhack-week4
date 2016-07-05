@@ -1,0 +1,28 @@
+<!-- new.html.erb -->
+
+	<h1>Add a new contact</h1>
+
+<form action="/contacts" method="POST">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="contact[name]" id="name">
+  </div>
+
+  <div>
+    <label for="address">Address</label>
+    <textarea name="contact[address]" id="address"></textarea>
+  </div>
+
+  <div>
+    <label for="phone">Phone number</label>
+    <input type="tel" name="contact[phone]" id="phone">
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" name="contact[email]" id="email">
+  </div>
+  <button type="submit">Add this contact</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
