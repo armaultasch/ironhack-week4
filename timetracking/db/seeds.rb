@@ -16,4 +16,16 @@ projectG = Project.create(name: "Tobi", description: "Where I spend my money")
 projectH = Project.create(name: "Staples", description: "Get office supplies")
 projectI = Project.create(name: "Facebook")
 projectJ = Project.create(name: "Snapchat", description: "viewing stories")
+
+
+TimeEntry.create(hours: 1, minutes: 03, comments: "did mad work bruh", date: Time.now, project_id: projectA.id)
+TimeEntry.create(hours: 0, minutes: 45, comments: "ate pizza", date: Time.now, project_id: projectB.id)
+TimeEntry.create(hours: 0, minutes: 30, comments: "spent no money for a lot", date: Time.now, project_id: projectC.id)
+TimeEntry.create(hours: 2, minutes: 40, comments: "drank and smoked", date: Time.now, project_id: projectD.id)
+TimeEntry.create(hours: 3, minutes: 10, comments: "hated it", date: Time.now, project_id: projectE.id)
+TimeEntry.create(hours: 2, minutes: 0, comments: "didn't eat", date: Time.now, project_id: projectF.id)
+TimeEntry.create(hours: 2, minutes: 15, comments: "got cute clothes", date: Time.now, project_id: projectG.id)
+TimeEntry.create(hours: 1, minutes: 30, comments: "get anxiety", date: Time.now, project_id: projectH.id)
+TimeEntry.create(hours: 1, minutes: 10, comments: "stalked", date: Time.now, project_id: projectI.id)
+TimeEntry.create(hours: 4, minutes: 20, comments: "do awesome shit", date: Time.now, project_id: projectJ.id)
 puts "done"
