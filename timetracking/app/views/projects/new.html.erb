@@ -1,5 +1,6 @@
 <!-- new.html.erb -->
 <h1>Add a project</h1>
+
 <%= form_for @my_project do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
@@ -7,5 +8,8 @@
 <%= f.label :description %>
 <%= f.text_area :description %>
 
+<%= f.label :due_date %>
+<%= f.date_field :due_date %>
 <%= f.button %>
 <% end %>
+
