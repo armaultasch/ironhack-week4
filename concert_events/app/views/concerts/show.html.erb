@@ -1,52 +1,71 @@
 <!-- show.html.erb -->
 
-<html>
 
-<body>
+<div class="show_back">
 	<header>
 		WE LOVE MUSIC
 	</header>
+	<div class="details">
 <h3> Concert Details </h3>
 <h2><%= @my_concert.artist %></h2>
 
 <br>
-Venue:
+<b>Venue:</b>
 <br>
 --<%= @my_concert.venue %>
 <br>
-City:
+<b>City:</b>
 <br>
 --<%= @my_concert.city %>
 <br>
-Description:
+<b>Description:</b>
 <br>
 --<%= @my_concert.description %>
 <br>
-Date/Time:
+<b>Date/Time:</b>
 <br>
 --<%= @my_concert.date %>
 <br>
-Price:
+<b>Price:</b>
 <br>
 --<%= @my_concert.price %>
+</div>
 <!-- <a href="/concerts/<%= @my_concert.id%>/time_entries">
 	See Time Entry
 </a> -->
-<form action="/concerts/<%= @my_concert.id %>"> Comment:
+
+
+<form action="/concerts/<%= @my_concert.id %>/comments/" method="POST"> Comment:
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" required >
+    <input type="text" name="[comment]name" required >
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input type="text" name="[comment]email" required >
   </div>
 
   <div>
     <label for="comments">Comments</label>
-    <textarea  id="comments" required></textarea>
+    <textarea  name="[comment]comments" required></textarea>
   </div>
 
   <button type="submit">Submit Comment</button>
   <input type="hidden" name="authenticity_token"
       value="<%= form_authenticity_token %>">
+
+
+<ul> Comments:
+	<% @my_comments.each do |x| %>
+	<li>
+		<%= x.comments %>
+		</li>
+		<% end %>
+	</ul>
+
+
 </form>
+
 <br>
 <a href="/concerts">
 	See All Concerts
@@ -54,5 +73,5 @@ Price:
 <footer>
 		Rocking with Rails!
 	</footer>
-</body>
-</html>
+</div>
+
