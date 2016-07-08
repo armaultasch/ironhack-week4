@@ -1,0 +1,58 @@
+<!-- show.html.erb -->
+
+<html>
+
+<body>
+	<header>
+		WE LOVE MUSIC
+	</header>
+<h3> Concert Details </h3>
+<h2><%= @my_concert.artist %></h2>
+
+<br>
+Venue:
+<br>
+--<%= @my_concert.venue %>
+<br>
+City:
+<br>
+--<%= @my_concert.city %>
+<br>
+Description:
+<br>
+--<%= @my_concert.description %>
+<br>
+Date/Time:
+<br>
+--<%= @my_concert.date %>
+<br>
+Price:
+<br>
+--<%= @my_concert.price %>
+<!-- <a href="/concerts/<%= @my_concert.id%>/time_entries">
+	See Time Entry
+</a> -->
+<form action="/concerts/<%= @my_concert.id %>"> Comment:
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" required >
+  </div>
+
+  <div>
+    <label for="comments">Comments</label>
+    <textarea  id="comments" required></textarea>
+  </div>
+
+  <button type="submit">Submit Comment</button>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+</form>
+<br>
+<a href="/concerts">
+	See All Concerts
+</a>
+<footer>
+		Rocking with Rails!
+	</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- index.html.erb -->
+<% if flash[:notice] %> 
+  <%= flash[:notice] %> 
+<% end %>
+
+	<header>
+		<p> Rocking with Rails! </p>
+	</header>
+<h1> Concerts Happening Today!!! </h1>
+	<ul> 
+		<% @concerts_today.each do |today|%>
+			<li>
+				<a href='/concerts/<%= today.id %>'><%= today.artist%></a>
+		<% if today.city != nil %>
+		- <%=today.city %>
+	<% end %>
+
+			</li>
+		<% end %>
+	</ul>
+	
+<aside>
+	<h3> Concerts Happening Later This Month </h3>
+	<ul>
+	<% @concerts_array.each do |concert| %>
+	<li>
+		<a href='/concerts/<%= concert.id %>'><%= concert.artist%></a>
+		<% if concert.city != nil %>
+		- <%=concert.city %>
+	<% end %>
+	</li>
+<% end %>
+</ul>
+</aside>
+<a href="/concerts/new">Add Concert</a>
+	<footer>
+		WE LOVE BEATS!
+
+	</footer>
+
+

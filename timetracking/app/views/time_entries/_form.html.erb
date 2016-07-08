@@ -1,4 +1,7 @@
 <!-- _form.html.erb -->
+<% if flash[:notice] %> 
+  <%= flash[:notice] %> 
+<% end %>
 <% if @my_entries.errors.any? %>
 <ul>
 	<% @my_entries.errors.full_messages.each do |error_msg| %>

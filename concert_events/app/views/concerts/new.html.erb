@@ -1,0 +1,34 @@
+<!-- new.html.erb -->
+<html>
+
+<body>
+	<header>
+		WE LOVE MUSIC
+	</header>
+<h1>Add a Concert</h1>
+
+<%= form_for @my_concert do |f| %>
+<%= f.label :artist %>
+<%= f.text_field :artist, :required => true%>
+<br>
+<%= f.label :venue %>
+<%= f.text_field :venue, :required => true%>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description, :required => true%>
+<br>
+<%= f.label :city %>
+<%= f.text_field :city, :required => true %>
+<br>
+<%= f.label :date %>
+<%= f.datetime_field :date, :required => true %>
+<br>
+<%= f.label :price %>
+<%= f.number_field :price, :required => true %>
+<%= f.button %>
+<% end %>
+<footer>
+		Rocking with Rails!
+	</footer>
+</body>
+</html>

@@ -16,6 +16,7 @@ class TimeEntriesController < ApplicationController
 		@my_entries = @my_project.time_entries.new(entry_params)
 
 		if @my_entries.save
+			flash[:notice] = "project created successfully"
 			redirect_to "/projects/#{@my_project.id}/time_entries"
 		else render "new"
 		end
